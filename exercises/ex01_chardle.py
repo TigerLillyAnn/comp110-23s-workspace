@@ -2,12 +2,11 @@
 __author__ = 730477496
 
 Word: str = input("Enter a 5-character word:")
-Letter: str = input("Enter a single character:")
-
-if 5 < len(Word) > 5 : 
+if 5 < len(Word) > 5: 
     print("Error: Word must contain 5 letters")
     exit()
-if 2 < len(Letter) > 2 : 
+Letter: str = input("Enter a single character:")
+if 2 < len(Letter) > 2: 
     print("Error: Character must be a single character.")
     exit()
 
@@ -45,4 +44,4 @@ if (x == 0):
     print("No instances of " + Letter + " found in " + Word)
 
 if (x >= 2):
-        print(x, "instances of " + Letter + " found in " + Word)
+    print(x, "instances of " + Letter + " found in " + Word)
