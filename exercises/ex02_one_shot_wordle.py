@@ -14,8 +14,6 @@ while len(word) != len(secret):
 
 i: int = 0
 
-
-
 while i < len(secret):
     if word[i] == secret[i]:
         BOXES += GREEN_BOX
