@@ -38,4 +38,3 @@ if word != secret:
 if word == secret:
     print("You got it!")
 exit 
-
