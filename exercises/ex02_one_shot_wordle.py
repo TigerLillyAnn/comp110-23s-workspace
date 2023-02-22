@@ -1,3 +1,4 @@
+"""Super close version of Wordle!!!"""
 __author__ = "730477496"
 
 GREEN_BOX: str = "\U0001F7E9"
@@ -12,6 +13,8 @@ while len(word) != len(secret):
     word = input("That was not 6 letters! Try again: ")
 
 i: int = 0
+
+
 
 while i < len(secret):
     if word[i] == secret[i]:
@@ -29,3 +32,7 @@ while i < len(secret):
             BOXES += GRAY_BOX
     i = i + 1 
 print(BOXES)
+
+if word == secret:
+    print("You got it!")
+exit 
