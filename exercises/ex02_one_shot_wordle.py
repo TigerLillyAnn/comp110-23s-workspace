@@ -28,9 +28,14 @@ while i < len(secret):
             BOXES += YELLOW_BOX
         else:
             BOXES += GRAY_BOX
+    
     i = i + 1 
+
 print(BOXES)
+if word != secret:
+    print("Not quite. Play again soon!")
 
 if word == secret:
     print("You got it!")
 exit 
+
