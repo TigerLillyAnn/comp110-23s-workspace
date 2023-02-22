@@ -1,24 +1,30 @@
 __author__ = "730477496"
 
+GREEN_BOX: str = "\U0001F7E9"
+GRAY_BOX: str = "\U00002B1C"
+YELLOW_BOX: str = "\U0001F7E8"
+
+secret: str = "python"
 word: str = input("What is your 6-letter guess? ")
-while len(word) != len("python"):
+while len(word) != len(secret):
     word = input("That was not 6 letters! Try again: ")
 
-if word == "python":
-    print("Woo! You got it!")
-    print("\U0001F7E9" + "\U0001F7E9" + "\U0001F7E9" + "\U0001F7E9" + "\U0001F7E9" + "\U0001F7E9")
-    exit
+i: int = 0
 
-i = int = 0
-
-while i < len("python"):
-    if i == "python" :
-        print("\U0001F7E9")
-        i = i + 1 
+while i < len(secret):
+    if word[i] == secret[i]:
+        print(GREEN_BOX)
     else:
-        if word[i] in "python":
-            print("\U0001F7E8")
-            i = i + 1
+        j: int = 0
+        in_secret: bool = False
+        while j < len(secret):
+            if secret[j] == word[i]:
+                in_secret = True
+            
+            j += 1
+        if in_secret:
+            print(YELLOW_BOX)
         else:
-            print("\U00002B1C")
-            i = i + 1
+            print(GRAY_BOX)
+    i = i + 1 
+
