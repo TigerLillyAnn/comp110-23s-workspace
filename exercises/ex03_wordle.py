@@ -29,17 +29,16 @@ def emojified(guess: str, secret: str) -> str:
             BOXES += GREEN_BOX
         else:
             j: int = 0
-            in_secret: bool = False
+            found: bool = False
             while j < len(guess):
-                if guess[j] == secret[i]:
-                    in_secret = True
-                j += 1
-                if in_secret:
+                if guess[i] == secret[j]:
                     BOXES += YELLOW_BOX
-                else:
-                    BOXES += GRAY_BOX
-            i = i + 1 
-    return(BOXES)
+                    found = True
+                j += 1
+            if not found: 
+                BOXES += GRAY_BOX
+        i += 1 
+    return BOXES 
 def input_guess(length:int) -> str:
     """giving an integer "expected" length of a guess"""
     guess = input("Enter a " + str(length) + " character word: ")
@@ -53,7 +52,7 @@ def main() -> None:
     i: int = 0
     while i < 7:
         print("=== Turn " + str(i) +"/6 ===")
-        emoji: str = emojified(input_guess(5), secret)
+        BOXES = emojified(input_guess(5), secret)
         print(BOXES)
         if BOXES == (GREEN_BOX * 5):
             print("You won in " + str(i) + "/6 turns!")
@@ -63,4 +62,3 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow!")
 if __name__ == "__main__":
     main()
-
