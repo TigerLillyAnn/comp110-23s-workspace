@@ -5,17 +5,17 @@ GRAY_BOX: str = "\U00002B1C"
 YELLOW_BOX: str = "\U0001F7E8"
 BOXES = ""  
 i: int = 0
-def contains_char(Str, Char) -> bool:
+def contains_char(word: str, wordchar: str) -> bool:
     """search the input word for matching letters with characters"""
-    n: int = len(Str)
+    n: int = len(word)
     j: int = 0
-    assert len(Char) == 1
+    assert len(wordchar) == 1
     while j < n:
-        if Str[j] == Char:
+        if word[j] == wordchar:
             j += 1
             return True
         else :
-            if Str[j] != Char:
+            if word[j] != wordchar:
                 j += 1
             else :
                 return False 
@@ -49,7 +49,7 @@ def main() -> None:
     """Entry point to the main game and loop"""
     secret = "codes"
     BOXES = "" 
-    i: int = 0
+    i: int = 1
     while i < 7:
         print("=== Turn " + str(i) +"/6 ===")
         BOXES = emojified(input_guess(5), secret)
