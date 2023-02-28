@@ -27,16 +27,10 @@ def emojified(guess: str, secret: str) -> str:
     while i < len(guess):
         if guess[i] == secret[i]:
             BOXES += GREEN_BOX
-        else:
-            j: int = 0
-            found: bool = False
-            while j < len(guess):
-                if guess[i] == secret[j]:
-                    BOXES += YELLOW_BOX
-                    found = True
-                j += 1
-            if not found: 
-                BOXES += GRAY_BOX
+        elif contains_char(secret, guess[i]):
+            BOXES += YELLOW_BOX
+        else : 
+            BOXES += GRAY_BOX
         i += 1 
     return BOXES 
 def input_guess(length:int) -> str:
