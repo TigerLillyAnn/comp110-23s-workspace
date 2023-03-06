@@ -9,10 +9,10 @@ def all(ints, insert: int) -> bool:
         j = j + 1
     return False
 
-def max_number(number: list[int]) -> int:
-    if len(number) == 0:
+def max(input_list: list[int]) -> int:
+    if len(input_list) == 0:
         raise ValueError("max() arg is an empty List")
-    return max(number)
+    return max(input_list)
 
 def is_equal(ints: list[int], insert: list[int]) -> bool:
     if len(ints) != len(insert):
