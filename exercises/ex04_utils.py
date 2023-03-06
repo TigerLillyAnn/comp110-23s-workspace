@@ -3,12 +3,10 @@ ___author___ = "730477496"
 
 
 def all(numbers, target):
-    i: int = 0
-    numbers: list[int] = [1, 2, 3]
     if not numbers:
         return False
-    else:
-        return True
+    return numbers.count(target) == len(numbers)
+#using count for smaller list recommended since it goes through the sequence twice.
 
 def max(numbers):
     if len(numbers) == 0:
