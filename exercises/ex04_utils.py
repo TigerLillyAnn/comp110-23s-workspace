@@ -10,7 +10,7 @@ def all(ints, insert: int) -> bool:
         j = j + 1
     return False
 
-def find_max(number: list[int]) -> int:
+def max(number: list[int]) -> int:
     if len(number) == 0:
         raise ValueError("List is empty.")
     return max(number)
