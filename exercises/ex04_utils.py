@@ -2,23 +2,22 @@
 ___author___ = "730477496"
 
 def all(ints, insert: int) -> bool:
-    n: int = len(ints)
     j: int = 0
-    while j < n:
+    while j < len(int):
         if ints[j] == insert:
             return True
         j = j + 1
     return False
 
-def max(number: list[int]) -> int:
+def max_number(number: list[int]) -> int:
     if len(number) == 0:
-        raise ValueError("List is empty.")
+        raise ValueError("max() arg is an empty List")
     return max(number)
 
 def is_equal(ints: list[int], insert: list[int]) -> bool:
-    i = 0
     if len(ints) != len(insert):
         return False
+    i = 0
     while i < len(ints):
         if ints[i] != insert[i]:
             return False
