@@ -3,7 +3,7 @@ ___author___ = "730477496"
 
 def all(ints, insert: int) -> bool:
     j: int = 0
-    while j < len(int):
+    while j < len(ints):
         if ints[j] == insert:
             return True
         j = j + 1
