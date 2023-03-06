@@ -17,8 +17,6 @@ def find_max(number: list[int]) -> int:
 
 def is_equal(ints: list[int], insert: list[int]) -> bool:
     i = 0
-    assert is_equal([1, 2, 2], [1, 2, 2]) == True
-    assert is_equal([2, 2, 2, 2, 2, 2], [2, 2, 2, 2, 2, 2]) == True
     if len(ints) != len(insert):
         return False
     while i < len(ints):
