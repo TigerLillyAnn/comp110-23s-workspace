@@ -15,17 +15,12 @@ def find_max(number: list[int]) -> int:
         raise ValueError("List is empty.")
     return max(number)
 
-def is_equal(ints, insert:int) -> bool:
-    count: int = 0
-    count2: int = 0
-    output: bool = False
+def is_equal(ints: list[int], insert: list[int]) -> bool:
+    i = 0
     if len(ints) != len(insert):
         return False
-    while count2 < len(insert):
-        if ints[count] == insert[count2]:
-            output = True
-        else:
-            return False 
-        count += 1
-        count2 += 1
-    return output
+    while i < len(ints):
+        if ints[i] != insert[i]:
+            return False
+        i += 1
+    return True
