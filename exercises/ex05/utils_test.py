@@ -1,18 +1,21 @@
-"""Asserting list and utility functions"""
+"""Asserting list and utility functions!"""
 ___author___ = "730477496"
 
 from exercises.ex05.utils import only_evens, concat, sub
 
+
 def test_only_evens():
+    """Asserting only_evens!"""
     test_list_1: list[int] = [2, 3, 4, 5]
     assert only_evens(test_list_1) == [2, 4]
     test_list_2: list[int] = [50, 60, 70, 80, 90, 100]
     assert only_evens(test_list_2) == [60, 80, 100]
-    test_list_3: list[int] = [5, 7, 9]
+    test_list_3: list[int] = [1, 3, 5]
     assert only_evens(test_list_3) == []
 
 
 def test_concat():
+    """Assering concat!"""
     test_first_list_1: list[int] = [1, 2, 3]
     test_second_list_1: list[int] = [1, 2, 3]
     assert concat(test_first_list_1 + test_second_list_1) == [1, 2, 3, 1, 2, 3]
@@ -25,6 +28,7 @@ def test_concat():
 
 
 def test_sub():
+    """Asserting sub!"""
     test_first_1: list[int] = [10, 20, 30, 40]
     start_index_1: list[int] = [20]
     end_index_1: list[int] = [30]
