@@ -1,7 +1,6 @@
 __author__ = "730477496"
 
 def only_evens(i: list[int]):
-    #returns only even numbers
     even = []
     for num in i:
         if num % 2 == 0:
@@ -9,7 +8,6 @@ def only_evens(i: list[int]):
     return even
 
 def concat(first: list[int], second: list[int]):
-    #combines first and second list together
     return first + second 
 
 def sub(first: list[int], start_index: list[int], end_index: list[int]):
