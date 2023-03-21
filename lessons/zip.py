@@ -5,9 +5,9 @@ from typing import List, Dict
 
 def zip(keys: List[str], values: List[int]) -> Dict[str, int]:
     if len(keys) != len(values):
-        return []
+        return {}
     
-    output = []
+    output = {}
     for i in range(len(keys)):
         output[keys[i]] = values[i]
     return output
