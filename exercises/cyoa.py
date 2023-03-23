@@ -6,6 +6,7 @@ CITY: str = "\U0001F3D9"
 player: str = ""
 points: int = 0
 
+
 def chance_game(points: int) -> int:
     """Defines the chance game in the Metal City!"""
     print("Welcome to the wonderful Game of Chance {player}! You currently have {points} points!")
@@ -21,13 +22,16 @@ def chance_game(points: int) -> int:
     print(f"Your total adventure points are {points}.")
     return points
 
+
 def greet() -> None:
     """The greeting for the player in the very beginning of the game."""
     print("Welcome to the Game!")
     player = input("What is your name? ")
     print(f"Hello, {player}! Let's begin your Journey.")
 
+
 def path1():
+    """Framework for the choice of Path 1"""
     print("You chose path 1. This path leads to an ocean shore.") 
     print("You can either go for a swim, or continue along the sea shore.")
     points = 0
@@ -66,7 +70,8 @@ def path1():
             print("invalid choice. Please try again.")
     print(f"You earned {points} adventure points on your Ocean Shores exploratoin!")
     points += points
-            
+
+
 def path2():
     """Choices for the second path through the city of metal."""
     print("You chose path 2. This path leads to the City of Metal. A large and sprawling city full of the advancements of Technology.")
@@ -104,10 +109,15 @@ def path2():
             print("That is not a valid input. Try again.")
             path2()
 
+
 def end_game(adventure_points):
+    """What happens when the game is ended"""
     print(f"Goodbye! You collected {adventure_points} adventure points")
+    exit()
+
 
 def main():
+    """Framework for the entire game."""
     greet()
     adventure_points = 0
     while True:
@@ -125,6 +135,6 @@ def main():
         else:
             print("Invalid choice. Try again.")
 
-            
+
 if __name__ == "__main__":
     main()
