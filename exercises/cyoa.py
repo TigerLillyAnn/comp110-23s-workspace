@@ -31,7 +31,7 @@ def greet() -> None:
 
 
 def path1():
-    """Framework for the choice of Path 1"""
+    """Framework for the choice of Path 1."""
     print("You chose path 1. This path leads to an ocean shore.") 
     print("You can either go for a swim, or continue along the sea shore.")
     points = 0
@@ -111,7 +111,7 @@ def path2():
 
 
 def end_game(adventure_points):
-    """What happens when the game is ended"""
+    """What happens when the game is ended."""
     print(f"Goodbye! You collected {adventure_points} adventure points")
     exit()
 
