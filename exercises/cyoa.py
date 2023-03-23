@@ -3,9 +3,10 @@ ___author___ = "730477496"
 import random
 BOAT: str = "\u2693"
 CITY: str = "\U0001F3D9"
+global player
+global points
 
 def chance_game(points: int) -> int:
-    global player
     print("Welcome to the wonderful Game of Chance {player}! You currently have {points} points!")
     print("You are now playing the Game of Chance. Roll the dice to earn points")
     print("1. Roll the dice.")
@@ -16,11 +17,10 @@ def chance_game(points: int) -> int:
         print(f"You rolled a {roll}")
     elif choice == "2":
         print("You left the Game of Chance.")
-    print(f"Your total points are {points}.")
+    print(f"Your total adventure points are {points}.")
     return points
 
-def greet():
-    global player
+def greet() -> None:
     print("Welcome to the Game!")
     player = input("What is your name? ")
     print(f"Hello, {player}! Let's begin your Journey.")
@@ -54,7 +54,7 @@ def path1():
             seagull_choice = input("Enter your choice: ")
             if seagull_choice == "1":
                 print("You saved the sea turtle. It seems to give you a small wink as it continues its own journey.")
-                points += 10
+                adventure_points += 10
             else:
                 print("You continue on your way as two lives become only one.All creatures need to eat afterall.")
         elif choice == "3":
@@ -63,8 +63,7 @@ def path1():
         else:
             print("invalid choice. Please try again.")
     print(f"You earned {points} adventure points on your Ocean Shores exploratoin!")
-    global adventure_points 
-    adventure_points += points
+    points += points
             
 def path2():
     print("You chose path 2. This path leads to the City of Metal. A large and sprawling city full of the advancements of Technology.")
