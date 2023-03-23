@@ -3,17 +3,18 @@ ___author___ = "730477496"
 import random
 BOAT: str = "\u2693"
 CITY: str = "\U0001F3D9"
-global player
-global points
+player: str = ""
+points: int = 0
 
 def chance_game(points: int) -> int:
+    """Defines the chance game in the Metal City!"""
     print("Welcome to the wonderful Game of Chance {player}! You currently have {points} points!")
     print("You are now playing the Game of Chance. Roll the dice to earn points")
     print("1. Roll the dice.")
     print("2. Leave the Game of Chance")
     choice = input("Enter your choice: ")
     if choice == "1":
-        roll = random(1,6)
+        roll = random(1, 6)
         print(f"You rolled a {roll}")
     elif choice == "2":
         print("You left the Game of Chance.")
@@ -21,6 +22,7 @@ def chance_game(points: int) -> int:
     return points
 
 def greet() -> None:
+    """The greeting for the player in the very beginning of the game."""
     print("Welcome to the Game!")
     player = input("What is your name? ")
     print(f"Hello, {player}! Let's begin your Journey.")
@@ -54,7 +56,7 @@ def path1():
             seagull_choice = input("Enter your choice: ")
             if seagull_choice == "1":
                 print("You saved the sea turtle. It seems to give you a small wink as it continues its own journey.")
-                adventure_points += 10
+                points += 10
             else:
                 print("You continue on your way as two lives become only one.All creatures need to eat afterall.")
         elif choice == "3":
@@ -66,6 +68,7 @@ def path1():
     points += points
             
 def path2():
+    """Choices for the second path through the city of metal."""
     print("You chose path 2. This path leads to the City of Metal. A large and sprawling city full of the advancements of Technology.")
     points = 0
     while True:
@@ -100,11 +103,6 @@ def path2():
         else:
             print("That is not a valid input. Try again.")
             path2()
-            
-
-            
-
-
 
 def end_game(adventure_points):
     print(f"Goodbye! You collected {adventure_points} adventure points")
@@ -126,5 +124,7 @@ def main():
             end_game(adventure_points)
         else:
             print("Invalid choice. Try again.")
+
+            
 if __name__ == "__main__":
     main()
